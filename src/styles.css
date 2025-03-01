@@ -49,7 +49,7 @@ p {
 .current-temperature-icon {
 display: flex;
 position: relative;
-top: -70px;
+top: -50px;
 left: 450px;
 font-size: 30px;
 }
@@ -57,7 +57,7 @@ font-size: 30px;
 .current-temperature {
     display: flex;
     position: relative;
-    top: -112px;
+    top: -95px;
     left: 480px;
     font-size: 40px;
     margin-left: 7px;
