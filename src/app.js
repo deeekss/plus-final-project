@@ -4,9 +4,11 @@ let temperature = response.data.temperature.current;
 let cityInputElement = document.querySelector ("#city-input");
 let temperatureDescription = document.querySelector("#temperature-condition-description");
 let humidityPercentage = document.querySelector ("#humidity-percentage");
+let windSpeed = document.querySelector ("#wind-speed");
 cityInputElement.innerHTML = response.data.city;
 temperatureDescription.innerHTML = response.data.condition.description;
 humidityPercentage.innerHTML = `${response.data.temperature.humidity}%`;
+windSpeed.innerHTML = `${response.data.wind.speed}km/h`
 currentTemperatureElement.innerHTML = Math.round (temperature);
 }
 
