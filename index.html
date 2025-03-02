@@ -12,14 +12,14 @@
 <body>
     <div class="weather-app">
     <header> 
-    <form class="search-form">
-        <input type="text" placeholder="Enter a city..." class="search-field" required/>
+    <form class="search-form" id="search-form">
+        <input type="text" placeholder="Enter a city..." class="search-field" id="search-field"/>
         <input type="submit" value="Search" class="search-button" />
     </form>
     </header>
     <main>
     <div>
-    <h1> London </h1>
+    <h1 id="city-input"> London </h1>
     <p>
      Saturday 20:38, scattered clouds 
     </br>
@@ -41,5 +41,6 @@
     This project was coded by <a href="https://github.com/deeekss" blank> Eni </a> - <a href="https://github.com/deeekss/plus-final-project" blank> open-sourced on GitHub </a> and <a href="https://enidikoweatherapp.netlify.app/" blank > hosted on Netlify </a>
     </footer>
 </div>
+<script src="src/app.js"></script>
 </body>
 </html>
