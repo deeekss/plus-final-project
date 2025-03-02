@@ -54,13 +54,14 @@ p {
 display: flex;
 position: relative;
 top: -80px;
-left: 450px;
+left: 420px;
 font-size: 40px;
 }
 
 .current-temperature-icon {
-    font-size: 40px;
-    margin-top: 22px;
+    font-size: 50px;
+    margin-top: 15px;
+    margin-right: 5px;
 }
 
 .current-temperature {

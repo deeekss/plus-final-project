@@ -1,7 +1,13 @@
 function displayWeatherInfo (response) {
 let currentTemperatureElement = document.querySelector("#current-temperature");
-currentTemperatureElement.innerHTML = Math.round (response.data.temperature.current);
-console.log(response.data);
+let temperature = response.data.temperature.current;
+let cityInputElement = document.querySelector ("#city-input");
+let temperatureDescription = document.querySelector("#temperature-condition-description");
+let humidityPercentage = document.querySelector ("#humidity-percentage");
+cityInputElement.innerHTML = response.data.city;
+temperatureDescription.innerHTML = response.data.condition.description;
+humidityPercentage.innerHTML = `${response.data.temperature.humidity}%`;
+currentTemperatureElement.innerHTML = Math.round (temperature);
 }
 
 function searchForCity (city) {
@@ -11,14 +17,13 @@ let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${api
 axios.get(apiURL).then(displayWeatherInfo);
 }
 
-
 function search (event) {
 event.preventDefault();
 let searchFieldInput = document.querySelector("#search-field");
-let cityInputElement = document.querySelector ("#city-input");
-cityInputElement.innerHTML = searchFieldInput.value;
 searchForCity(searchFieldInput.value);
 }
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener ("submit", search);
+
+//ask Frank on how to show a random city when the page loads
