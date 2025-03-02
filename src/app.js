@@ -5,6 +5,8 @@ let cityInputElement = document.querySelector ("#city-input");
 let temperatureDescription = document.querySelector("#temperature-condition-description");
 let humidityPercentage = document.querySelector ("#humidity-percentage");
 let windSpeed = document.querySelector ("#wind-speed");
+let iconElement = document.querySelector("#temperature-icon");
+iconElement.innerHTML = `<img src= "${response.data.condition.icon_url}" class="current-temperature-icon"/>`;
 
 cityInputElement.innerHTML = response.data.city;
 temperatureDescription.innerHTML = response.data.condition.description;
