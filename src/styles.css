@@ -16,6 +16,7 @@ body {
 .search-form {
     font-family:"Roboto, serif";
     margin: 30px 10px;
+    margin-left: 0px;
 }
 
 .search-field {
