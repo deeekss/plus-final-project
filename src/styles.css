@@ -71,7 +71,8 @@ font-size: 40px;
 }
 
 .current-temperature-unit {
-    font-size: 35px;
+    font-size: 25px;
+    margin-top: 10px;
 }
 
 .temperature-specific-details {
