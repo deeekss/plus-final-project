@@ -66,6 +66,13 @@ let days = [
 let presentDay = days[day];
 currentDate.innerHTML = `${presentDay}, ${hours}:${minutes}`;
 
+function formatForecastDay (timestamp) {
+  let date = new Date (timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 function retrieveForecastData (city) {
   let apiKey = "e73c4be11o1t827c45e67a30e6f63ea0";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
@@ -79,7 +86,7 @@ function displayForecast(response) {
   if (index < 5) {
   forecastHtml += `       
   <div class="weather-forecast-day">
-    <div class="weather-forecast-date">Sun</div>
+    <div class="weather-forecast-date">${formatForecastDay(day.time)}</div>
     <div class="weather-forecast-icon">
      <img src="${day.condition.icon_url}" class="weather-forecast-icon"/>
     </div>
