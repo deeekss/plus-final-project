@@ -104,7 +104,7 @@ p {
 }
 
 .weather-forecast-icon {
-  font-size: 30px;
+  width: 100%;
   text-align: center;
 }
 
