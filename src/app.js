@@ -73,28 +73,26 @@ function retrieveForecastData (city) {
 }
 
 function displayForecast(response) {
-console.log(response)
-  // create an array with the days of the week
-  let days = ["Sun", "Tue", "Wed", "Thur", "Fri"];
-  //create a forecastHtml variable that has an empty string, which will allow me to inject the forecast HTML 
+
   let forecastHtml = "";
-//loop through the array of days one at a time, then make forecastHTML to equal to the forecast HTML with the day in it e.g., Sun
-  days.forEach (function (day) {
-  forecastHtml +=  
-  `       
+ response.data.daily.forEach (function (day) {
+  forecastHtml += `       
   <div class="weather-forecast-day">
-    <div class="weather-forecast-date">${day}</div>
-    <div class="weather-forecast-icon">🌤️</div>
+    <div class="weather-forecast-date">Sun</div>
+    <div class="weather-forecast-icon">
+     <img src="${day.condition.icon_url}"/>
+    </div>
     <div class="weather-forecast-temperatures">
       <div class="weather-forecast-temperature">
-        <strong>15º</strong>
+        <strong>${Math.round(day.temperature.maximum)}º</strong>
       </div>
-      <div class="weather-forecast-temperature">9º</div>
+      <div class="weather-forecast-temperature">${Math.round(
+        day.temperature.minimum
+      )}º</div>
     </div>
   </div>
   `;
 });
-// the loop above will repeat for the amount of days I've added
 
 let forecastElement = document.querySelector("#forecast");
 forecastElement.innerHTML = forecastHtml;
