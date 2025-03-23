@@ -32,7 +32,9 @@ function search(event) {
   searchForCity(searchFieldInput.value);
 }
 
-searchForCity("London")
+
+searchForCity("London");
+
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
@@ -62,4 +64,33 @@ let days = [
 let presentDay = days[day];
 currentDate.innerHTML = `${presentDay}, ${hours}:${minutes}`;
 
-//ask Frank on how to show a random city when the page loads
+
+function displayForecast() {
+
+  // create an array with the days of the week
+  let days = ["Sun", "Tue", "Wed", "Thur", "Fri"];
+  //create a forecastHtml variable that has an empty string, which will allow me to inject the forecast HTML 
+  let forecastHtml = "";
+//loop through the array of days one at a time, then make forecastHTML to equal to the forecast HTML with the day in it e.g., Sun
+  days.forEach (function (day) {
+  forecastHtml +=  
+  `       
+  <div class="weather-forecast-day">
+    <div class="weather-forecast-date">${day}</div>
+    <div class="weather-forecast-icon">🌤️</div>
+    <div class="weather-forecast-temperatures">
+      <div class="weather-forecast-temperature">
+        <strong>15º</strong>
+      </div>
+      <div class="weather-forecast-temperature">9º</div>
+    </div>
+  </div>
+  `;
+});
+
+let forecastElement = document.querySelector("#forecast");
+forecastElement.innerHTML = forecastHtml;
+
+}
+
+displayForecast()
