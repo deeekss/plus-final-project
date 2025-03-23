@@ -92,7 +92,7 @@ p {
 .weather-forecast {
     display: flex;
     justify-content: space-around;
-    margin-top: 40px;
+    margin-top: -25px;
 }
 
 .weather-forecast-date {
