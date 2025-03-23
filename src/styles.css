@@ -1,91 +1,127 @@
 body {
-    background-color:#F9F7FD;
-    font-family:  "Roboto", serif;
+  background-color: #f9f7fd;
+  font-family: "Roboto", serif;
 }
 
 .weather-app {
-    background-color:#FFFFFF;
-    max-width: 600px;
-    margin: 30px auto;
-    margin-top: 70px;
-    box-shadow: 0 30px 50px rgb(228, 218, 236);
-    padding: 30px;
-    border-radius: 20px;
+  background-color: #ffffff;
+  max-width: 600px;
+  margin: 30px auto;
+  margin-top: 70px;
+  box-shadow: 0 30px 50px rgb(228, 218, 236);
+  padding: 30px;
+  border-radius: 20px;
 }
 
 .search-form {
-    font-family:"Roboto, serif";
-    margin: 30px 10px;
-    margin-left: 0px;
+  font-family: "Roboto, serif";
+  margin: 30px 10px;
+  margin-left: 0px;
 }
 
 .search-field {
-    background-color: #F9F7FD;
-    font-size: 15px;
-    padding: 15px 300px 15px 10px;
-    border-radius: 6px;
-    border:none;
+  background-color: #f9f7fd;
+  font-size: 15px;
+  padding: 15px 300px 15px 10px;
+  border-radius: 6px;
+  border: none;
 }
 
 .search-button {
-background-color: #885DF1;
-color: #FFFFFF;
-font-size: 15px;
-padding: 14px 15px;
-margin-left: 5px;
-border: none;
-border-radius: 6px;
+  background-color: #885df1;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 14px 15px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 6px;
 }
 
 .search-button:hover {
-cursor: pointer;
+  cursor: pointer;
 }
 
 h1 {
-    line-height: 48px;
+  line-height: 48px;
 }
 
 p {
- margin-top: -20px;  
- font-size: 15px;
- color: #A8A6B4;
+  margin-top: -20px;
+  font-size: 15px;
+  color: #a8a6b4;
 }
 
 .current-temperature-container {
-display: flex;
-position: relative;
-top: -80px;
-left: 390px;
-font-size: 40px;
+  display: flex;
+  position: relative;
+  top: -80px;
+  left: 390px;
+  font-size: 40px;
 }
 
 .current-temperature-icon {
-   width:88px;
-   height: 88px;
-   margin-top: -2px;
-   margin-right: 4px;
+  width: 88px;
+  height: 88px;
+  margin-top: -2px;
+  margin-right: 4px;
 }
 
 .current-temperature {
-    font-size: 70px;
-    font-weight: bold;
+  font-size: 70px;
+  font-weight: bold;
 }
 
 .current-temperature-unit {
-    font-size: 25px;
-    margin-top: 10px;
+  font-size: 25px;
+  margin-top: 10px;
 }
 
 .temperature-specific-details {
-    color: #A8A6B4;
-    margin-top: -10px;
+  color: #a8a6b4;
+  margin-top: -10px;
 }
 
 .humidity-percent {
-   color:#F65281;
+  color: #f65281;
 }
 
 .wind-speed {
-    color: #F65281;
+  color: #f65281;
 }
 
+.weather-forecast {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.weather-forecast-date {
+  color: #a8a6b4;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.weather-forecast-icon {
+  font-size: 30px;
+  text-align: center;
+}
+
+.weather-forecast-temperatures {
+ margin-top: 15px;
+  text-align: center;
+  color: #f65281;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-forecast-temperature {
+    padding: 0 10px;
+}
+
+
+
+footer {
+    margin-top: 60px;
+}
