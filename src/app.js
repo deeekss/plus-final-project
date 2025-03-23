@@ -17,6 +17,8 @@ function displayWeatherInfo(response) {
   humidityPercentage.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
   currentTemperatureElement.innerHTML = Math.round(temperature);
+
+  retrieveForecastData(response.data.city);
 }
 
 function searchForCity(city) {
@@ -64,9 +66,14 @@ let days = [
 let presentDay = days[day];
 currentDate.innerHTML = `${presentDay}, ${hours}:${minutes}`;
 
+function retrieveForecastData (city) {
+  let apiKey = "e73c4be11o1t827c45e67a30e6f63ea0";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+    axios(apiUrl).then(displayForecast);
+}
 
-function displayForecast() {
-
+function displayForecast(response) {
+console.log(response)
   // create an array with the days of the week
   let days = ["Sun", "Tue", "Wed", "Thur", "Fri"];
   //create a forecastHtml variable that has an empty string, which will allow me to inject the forecast HTML 
@@ -87,6 +94,7 @@ function displayForecast() {
   </div>
   `;
 });
+// the loop above will repeat for the amount of days I've added
 
 let forecastElement = document.querySelector("#forecast");
 forecastElement.innerHTML = forecastHtml;
@@ -94,3 +102,5 @@ forecastElement.innerHTML = forecastHtml;
 }
 
 displayForecast()
+
+retrieveForecastData("London");
